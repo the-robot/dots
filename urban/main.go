@@ -39,9 +39,17 @@ func get(word string) []Definition {
     
         // add definitions to struct
         for i:=0; i<len(values); i++ {
+            // trim leading and tailing whitespaces
+            definition := strings.TrimSpace( gjson.Get(values[i].String(), "definition").String() )
+            example := strings.TrimSpace( gjson.Get(values[i].String(), "example").String() )
+
+            // NOTE: remove [ and ] from definitions and examples
+            definition = strings.Replace(definition, "[", "", -1)
+            definition = strings.Replace(definition, "]", "", -1)
+
             def := Definition {
-                definition: strings.TrimSpace( gjson.Get(values[i].String(), "definition").String() ),
-                example: strings.TrimSpace( gjson.Get(values[i].String(), "example").String() ),
+                definition: definition,
+                example: example,
             }
             defs = append(defs, def)
         }
