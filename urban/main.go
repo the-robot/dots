@@ -64,7 +64,7 @@ func main() {
 
     defs := get(args[0])
     if len(defs) == 0 {
-        fmt.Printf("%s cannot be found", args[0])
+        fmt.Printf("%s cannot be found\n", args[0])
         return
     }
     // if defs found
