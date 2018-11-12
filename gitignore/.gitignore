@@ -1,0 +1,8 @@
+bin/
+include/
+lib/
+__pycache__/
+.Python
+pip-selfcheck.json
+.DS_Store
+.vscode
