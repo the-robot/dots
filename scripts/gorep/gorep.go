@@ -1,22 +1,36 @@
 package main
 
 import (
+    "bufio"
     "fmt"
-    "io/ioutil"
+    "log"
     "os"
     "path/filepath"
-    "strings"
+    "regexp"
 )
 
 
-func read(filename string, text *string) {
-    b, err := ioutil.ReadFile(filename)
+func search(filename string, query string) bool {
+    file, err := os.Open(filename)
     if err != nil {
-        fmt.Println(err)
-        os.Exit(1)
+        log.Fatal(err)
+    }
+    defer file.Close()
+
+    scanner := bufio.NewScanner(file)
+    // search line by line
+    for scanner.Scan() {
+        var text string = scanner.Text()
+
+        fmt.Println(text)
+        //return true
     }
 
-    *text = strings.ToLower( string(b) )
+    if err := scanner.Err(); err != nil {
+        log.Fatal(err)
+    }
+
+    return false
 }
 
 func get_files(root string) []string {
@@ -42,13 +56,14 @@ func main() {
         os.Exit(1)
     }
     
-    // store file buffer
-    var buffer string
-    // word and files to lookup in
-    word := strings.ToLower( os.Args[1] )
-    args := os.Args[2:]
-    // to store list of files
+    // store file buffer and list of files to be serch over
     var files []string
+    
+    word := os.Args[1]
+    query := regexp.MustCompile( fmt.Sprintf(".*%s.*", word) )
+    args := os.Args[2:]
+
+    fmt.Println(query.MatchString("world is a simple program"))
 
     // check if --all or not, if get list of all files in given directory
     if args[0] != "--all" {
@@ -66,10 +81,8 @@ func main() {
     }
 
     for i:= 0; i<len(files); i++ {
-        read(files[i], &buffer)
-        
-        if strings.Contains(buffer, word) {
-            fmt.Printf("Found '%s' in '%s'\n", word, files[i])
+        if search(files[i], word) {
+            //fmt.Println("Found")
         }
     }
 }
