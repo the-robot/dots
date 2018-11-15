@@ -10,7 +10,7 @@ import (
 )
 
 
-func search(filename string, query string) bool {
+func search(filename string, query *regexp.Regexp) bool {
     file, err := os.Open(filename)
     if err != nil {
         log.Fatal(err)
@@ -22,8 +22,9 @@ func search(filename string, query string) bool {
     for scanner.Scan() {
         var text string = scanner.Text()
 
-        fmt.Println(text)
-        //return true
+        if query.MatchString(text) {
+            return true
+        }
     }
 
     if err := scanner.Err(); err != nil {
@@ -60,10 +61,8 @@ func main() {
     var files []string
     
     word := os.Args[1]
-    query := regexp.MustCompile( fmt.Sprintf(".*%s.*", word) )
+    query := regexp.MustCompile( fmt.Sprintf(`[\s]?%s[\s]?`, word) )
     args := os.Args[2:]
-
-    fmt.Println(query.MatchString("world is a simple program"))
 
     // check if --all or not, if get list of all files in given directory
     if args[0] != "--all" {
@@ -81,8 +80,9 @@ func main() {
     }
 
     for i:= 0; i<len(files); i++ {
-        if search(files[i], word) {
-            //fmt.Println("Found")
+        if search(files[i], query) {
+            fmt.Printf("Found %s in %s\n", word, files[i])
         }
     }
 }
+
