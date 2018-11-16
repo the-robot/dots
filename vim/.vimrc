@@ -22,14 +22,7 @@ Plugin 'mmisono/battery.vim'
 "Plugin 'vim-airline/vim-airline-themes'
 Plugin 'itchyny/lightline.vim'
 
-" Python
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'nvie/vim-flake8'
-Plugin 'vim-scripts/indentpython'
-Plugin 'vim-python/python-syntax'
-
 " Linters
-"Plugin 'vim-syntastic/syntastic'
 Plugin 'w0rp/ale'
 
 " Other Plugins
@@ -51,6 +44,7 @@ let g:python_highlight_all = 1
 " ALE Linter
 " enable completion where available.
 " this setting must be set before ALE is loaded.
+let b:ale_linters = ['pyflakes', 'flake8', 'pylint', "eslint"]
 let g:ale_completion_enabled = 1
 
 " ConqueTerm Shell
