@@ -18,8 +18,6 @@ Plugin 'airblade/vim-gitgutter'
 
 " AirLiner / LightLine
 Plugin 'mmisono/battery.vim'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'itchyny/lightline.vim'
 
 " Linters
