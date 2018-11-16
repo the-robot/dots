@@ -1,56 +1,62 @@
 syntax enable
+set encoding=utf-8
 
-set background=dark
-set backspace=indent,eol,start
 
-" For powerline shell
-" Always show statusline
-set laststatus=2
-" Use 256 colors
-set t_Co=256
-
-" For Vundle setup
-set nocompatible
-filetype off
+" ============ Vundle Setup  ================ "
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
 Plugin 'gmarik/Vundle.vim'
-" Add the plugin here
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
+
+" NerdTree
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+
+" Terminal
+Plugin 'jewes/Conque-Shell'
+Plugin 'airblade/vim-gitgutter'
+
+" AirLiner / LightLine
+Plugin 'mmisono/battery.vim'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+Plugin 'itchyny/lightline.vim'
+
+" Python
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'vim-scripts/indentpython'
+Plugin 'vim-python/python-syntax'
+
+" Linters
+"Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
+
+" Other Plugins
+Plugin 'morhetz/gruvbox'
+Plugin 'tmhedberg/SimpylFold'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'jewes/Conque-Shell'
-Plugin 'vim-scripts/indentpython'
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'ervandew/supertab'
-Plugin 'mmisono/battery.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'qpkorr/vim-bufkill'
+
 
 call vundle#end()
 
-" Line Numbering
-set nu
 
-"NERDTree config
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.pyc$','\~$','\.DS\_Store','\*\.swp'] "Ignore files for nerdtree
-let NERDTreeWinSize=31
-autocmd VimEnter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-"ConqueTerm Shell
-"autocmd VimEnter * execute "normal \<C-L>"
+" ============ VIM Plugins & Shortcuts  ================ "
+let g:python_highlight_all = 1
 
-"Key mapping for split navigations
+" ALE Linter
+" enable completion where available.
+" this setting must be set before ALE is loaded.
+let g:ale_completion_enabled = 1
+
+" ConqueTerm Shell
+" autocmd VimEnter * execute "normal \<C-L>"
+
+" Key mapping for split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -64,9 +70,10 @@ filetype plugin indent on
 let g:SimpylFold_docstring_preview=1
 set foldlevel=1
 set foldmethod=indent
-" Folding with spacebar
+" folding with spacebar
 nnoremap <space> za
-"PEP8 Indentation
+
+" Python PEP8 Indentation
 au BufNewFile, BufRead *.py
 	\ set tabstop=4
 	\ set softtabstop=4
@@ -82,26 +89,46 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
-set encoding=utf-8
-" python highlighting
-let python_highlight_all=1
+" NERDTree config
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.pyc$','\~$','\.DS\_Store','\*\.swp','__pycache__'] "Ignore files for nerdtree
+let NERDTreeWinSize=31
+autocmd VimEnter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-"Airline settings
+
+
+" ============ VIM User Interface  ================ "
+set background=dark
+set backspace=indent,eol,start
+
+" For powerline shell, always show statusline
+set laststatus=2
+" Use 256 colors
+set t_Co=256
+
+" Line Numbering
+set nu
+
+" Airline settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_exclude_preview=1
-
-" Set Bar and Editor (Syntax and Background) theme
 let g:airline_theme='onedark'
 
-"syntax on
-colorscheme onedark 
+" Color Scheme
+syntax on
+colorscheme onedark
 let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ }
 
+" Highlight Current Line
 augroup CursorLine
       au!
         au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
           au WinLeave * setlocal nocursorline
       augroup END
+
