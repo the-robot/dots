@@ -108,7 +108,7 @@ set t_Co=256
 " Line Numbering
 set nu
 
-" Lightline/Bufferline settings
+" Lightline & Bufferline
 let g:lightline = {}
 let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
