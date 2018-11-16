@@ -14,11 +14,14 @@ Plugin 'jistr/vim-nerdtree-tabs'
 
 " Terminal
 Plugin 'jewes/Conque-Shell'
+
+" Git
 Plugin 'airblade/vim-gitgutter'
 
-" AirLiner / LightLine
+" LightLine & Bufferline
 Plugin 'mmisono/battery.vim'
 Plugin 'itchyny/lightline.vim'
+Plugin 'mgee/lightline-bufferline'
 
 " Linters
 Plugin 'w0rp/ale'
@@ -105,16 +108,17 @@ set t_Co=256
 " Line Numbering
 set nu
 
-" Airline settings
-let g:airline#extensions#tabline#enabled=1
-let g:airline_powerline_fonts=1
-let g:airline_exclude_preview=1
-let g:airline_theme='onedark'
+" Lightline/Bufferline settings
+let g:lightline = {}
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+set showtabline=2
 
 " Color Scheme
 syntax on
 colorscheme onedark
-let g:lightline={ 'colorscheme': 'onedark', }
+"let g:lightline={ 'colorscheme': 'onedark', }
 
 " Highlight Current Line
 augroup CursorLine
@@ -123,3 +127,5 @@ augroup CursorLine
     au WinLeave * setlocal nocursorline
 augroup END
 
+" Nerdtree Tabs
+let g:nerdtree_tabs_open_on_console_startup=1
