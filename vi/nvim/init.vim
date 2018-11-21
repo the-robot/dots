@@ -21,7 +21,6 @@ Plugin 'w0rp/ale'
 " Vim Buffer Kill
 Plugin 'qpkorr/vim-bufkill'
 
-
 " Other Plugins
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'tpope/vim-fugitive'
