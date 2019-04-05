@@ -48,6 +48,7 @@ nnoremap <space> za
 let g:spacevim_lint_on_save=0
 
 " Ale Python3 Support
+" :help ale_python_flake8_options
 let g:ale_python_flake8_executable='python3'
 let g:ale_python_flake8_options='-m flake8'
 
