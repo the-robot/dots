@@ -44,7 +44,12 @@ set foldlevel=1
 set foldmethod=indent
 nnoremap <space> za
 
+" Disable Linting Windows
+let g:spacevim_lint_on_save=0
 
+" Ale Python3 Support
+let g:ale_python_flake8_executable='python3'
+let g:ale_python_flake8_options='-m flake8'
 
 " ============ VIM User Interface  ================ "
 " Highlight Current Line
