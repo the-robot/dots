@@ -25,6 +25,7 @@ Plugin 'qpkorr/vim-bufkill'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'luochen1990/rainbow'
 
 call vundle#end()
 
@@ -45,12 +46,21 @@ set foldmethod=indent
 nnoremap <space> za
 
 " Disable Linting Windows
-let g:spacevim_lint_on_save=0
+" let g:spacevim_lint_on_save=0
+let g:ale_open_list=0
+" let g:ale_set_loclist=0
+" let g:ale_set_quickfix=0
+" let g:ale_keep_list_window_open=0
 
 " Ale Python3 Support
-" :help ale_python_flake8_options
 let g:ale_python_flake8_executable='python3'
 let g:ale_python_flake8_options='-m flake8'
+
+" Ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|bin\|include\|lib\|__pycache__'
+
+
 
 " ============ VIM User Interface  ================ "
 " Highlight Current Line
@@ -59,4 +69,13 @@ augroup CursorLine
     au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
     au WinLeave * setlocal nocursorline
 augroup END
+
+" Color Scheme
+colorscheme srcery
+
+" Rainbow Parantheses
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
+" Space Vim (disable Linter Window)
+let g:neomake_open_list = 0
 
