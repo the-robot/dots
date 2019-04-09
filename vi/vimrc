@@ -33,7 +33,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ervandew/supertab'
 Plugin 'qpkorr/vim-bufkill'
-
+Plugin 'luochen1990/rainbow'
 
 call vundle#end()
 
@@ -94,6 +94,9 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" Rainbow Parantheses
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
 
 
 " ============ VIM User Interface  ================ "
@@ -117,7 +120,7 @@ set showtabline=2
 
 " Color Scheme
 syntax on
-colorscheme onedark
+" colorscheme onedark
 "let g:lightline={ 'colorscheme': 'onedark', }
 
 " Highlight Current Line
@@ -129,3 +132,6 @@ augroup END
 
 " Nerdtree Tabs
 let g:nerdtree_tabs_open_on_console_startup=1
+
+" Space Vim
+let g:spacevim_lint_on_save=0
