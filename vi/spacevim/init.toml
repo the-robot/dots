@@ -1,38 +1,81 @@
-#=============================================================================
-# dark_powered.toml --- dark powered configuration example for SpaceVim
-# Copyright (c) 2016-2017 Wang Shidong & Contributors
-# Author: Wang Shidong < wsdjeg at 163.com >
-# URL: https://spacevim.org
-# License: GPLv3
-#=============================================================================
+"=============================================================================
+" init.vim --- Entry file for neovim
+" Copyright (c) 2016-2017 Wang Shidong & Contributors
+" Author: Wang Shidong < wsdjeg at 163.com >
+" URL: https://spacevim.org
+" License: GPLv3
+"=============================================================================
 
-# All SpaceVim option below [option] section
-[options]
-    # set spacevim theme. by default colorscheme layer is not loaded,
-    # if you want to use more colorscheme, please load the colorscheme
-    # layer
-    colorscheme = "gruvbox"
-    background = "dark"
-    # Disable guicolors in basic mode, many terminal do not support 24bit
-    # true colors
-    enable_guicolors = true
-    # Disable statusline separator, if you want to use other value, please
-    # install nerd fonts
-    statusline_separator = "arrow"
-    statusline_inactive_separator = "arrow"
-    buffer_index_type = 4
-    enable_statusline_display_mode = false 
-    relativenumber = false
-    enable_tabline_filetype_icon = true
-    statusline_unicode_symbols = true
+execute 'source' fnamemodify(expand('<sfile>'), ':h').'/config/main.vim'
 
-# Enable autocomplete layer
-[[layers]]
-name = 'autocomplete'
-auto-completion-return-key-behavior = "complete"
-auto-completion-tab-key-behavior = "smart"
+set encoding=UTF-8
 
-[[layers]]
-name = 'shell'
-default_position = 'top'
-default_height = 30
+
+" ============ Vundle Setup  ================ "
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Linters
+Plugin 'w0rp/ale'
+
+" Vim Buffer Kill
+Plugin 'qpkorr/vim-bufkill'
+
+" Other Plugins
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'luochen1990/rainbow'
+
+call vundle#end()
+
+
+
+" ============ VIM Plugins & Shortcuts  ================ "
+" ALE Linter
+" enable completion where available.
+" this setting must be set before ALE is loaded.
+let b:ale_linters=['pyflakes', 'flake8', 'pylint', "eslint"]
+let g:ale_completion_enabled=1
+
+" Enable code folding
+filetype plugin indent on
+let g:SimpylFold_docstring_preview=1
+set foldlevel=1
+set foldmethod=indent
+nnoremap <space> za
+
+" Disable Linting Windows
+" let g:spacevim_lint_on_save=0
+let g:ale_open_list=0
+" let g:ale_set_loclist=0
+" let g:ale_set_quickfix=0
+" let g:ale_keep_list_window_open=0
+
+" Ale Python3 Support
+let g:ale_python_flake8_executable='python3'
+let g:ale_python_flake8_options='-m flake8'
+
+" Ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|bin\|include\|lib\|__pycache__'
+
+
+
+" ============ VIM User Interface  ================ "
+" Highlight Current Line
+augroup CursorLine
+    au!
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    au WinLeave * setlocal nocursorline
+augroup END
+
+" Color Scheme
+colorscheme srcery
+
+" Rainbow Parantheses
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
+" Space Vim (disable Linter Window)
+let g:neomake_open_list = 0
+
