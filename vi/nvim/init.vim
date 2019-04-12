@@ -11,6 +11,7 @@ execute 'source' fnamemodify(expand('<sfile>'), ':h').'/config/main.vim'
 set encoding=UTF-8
 
 
+
 " ============ Vundle Setup  ================ "
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -90,6 +91,8 @@ set autoindent
 
 " Space Vim to use NerdTree
 "let g:spacevim_filemanager='NerdTree'
+
+
 
 " ============ VIM User Interface  ================ "
 "
