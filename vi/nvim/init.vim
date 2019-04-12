@@ -15,8 +15,20 @@ set encoding=UTF-8
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" LightLine & Bufferline
+Plugin 'mmisono/battery.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'mgee/lightline-bufferline'
+
+" NerdTree
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+
 " Linters
 Plugin 'w0rp/ale'
+
+" Git
+Plugin 'airblade/vim-gitgutter'
 
 " Vim Buffer Kill
 Plugin 'qpkorr/vim-bufkill'
@@ -60,9 +72,27 @@ let g:ale_python_flake8_options='-m flake8'
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|bin\|include\|lib\|__pycache__'
 
+" Indentation
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
 
+" NERDTree config
+"let NERDTreeShowHidden=1
+"let NERDTreeIgnore=['\~$','\.DS\_Store','\*\.swp','__pycache__', '\.pyc$']
+"let NERDTreeWinSize=25
+"autocmd VimEnter * NERDTree
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Space Vim to use NerdTree
+"let g:spacevim_filemanager='NerdTree'
 
 " ============ VIM User Interface  ================ "
+"
 " Highlight Current Line
 augroup CursorLine
     au!
@@ -71,11 +101,25 @@ augroup CursorLine
 augroup END
 
 " Color Scheme
-colorscheme srcery
+colorscheme gruvbox 
 
-" Rainbow Parantheses
+" Lightline & Bufferline
+let g:lightline = {
+    \'colorscheme': 'one',
+    \'separator': { 'left': '', 'right': '' },
+    \'subseparator': { 'left': '', 'right': '' }
+    \}
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+set showtabline=2
+
+" rainbow parantheses
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
 " Space Vim (disable Linter Window)
 let g:neomake_open_list = 0
+
+" Vim, tabs to space
+:set tabstop=4
 
