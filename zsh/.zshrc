@@ -36,6 +36,13 @@ alias cat='bat'
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 
+# ====== Startup Commands ======
+# Start Tmux on shell load
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux -u
+fi
+
+
 # ====== ZSH Options ======
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
