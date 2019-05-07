@@ -1,0 +1,44 @@
+# Namesake SLiM Theme, edited by Cory Driscoll
+# For the SLiM Display Manager.
+# Based off of >
+# November Slim Theme 0.7
+# Created by Arthur Marino (@ArthurMarino)
+# URL: http://artt-m.deviantart.com/
+
+# Messages (ie: shutdown)
+msg_color #dde5e1
+msg_font Circular Std:size=14
+msg_x 50%
+msg_y 57%
+
+# valid values: stretch, tile
+background_style stretch
+background_color #eeeeee
+
+# Login Name
+username_font Circular Std:size=14
+username_color #dde5e1
+
+password_font Circular Std:size=14
+password_color #dde5e1
+
+username_x 50%
+username_y 82%
+
+password_x 50%
+password_y 82%
+
+username_msg Username
+password_msg Password
+
+# Input controls
+input_panel_x 50%
+input_panel_y 50%
+
+input_name_x 50
+input_name_y 300
+input_pass_x 50
+input_pass_y 300
+
+input_font Circular Std:size=13
+input_color #dde5e1
