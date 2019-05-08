@@ -33,3 +33,6 @@ default_height = 30
 name = 'checkers'
 open-list = 0
 
+# For bookmark feature
+[[layers]]
+name = 'tools'
