@@ -1,11 +1,3 @@
-"=============================================================================
-" init.vim --- Entry file for neovim
-" Copyright (c) 2016-2017 Wang Shidong & Contributors
-" Author: Wang Shidong < wsdjeg at 163.com >
-" URL: https://spacevim.org
-" License: GPLv3
-"=============================================================================
-
 execute 'source' fnamemodify(expand('<sfile>'), ':h').'/config/main.vim'
 
 set encoding=UTF-8
@@ -18,7 +10,7 @@ call vundle#begin()
 
 " LightLine & Bufferline
 Plugin 'mmisono/battery.vim'
-Plugin 'itchyny/lightline.vim'
+"Plugin 'itchyny/lightline.vim'
 "Plugin 'mgee/lightline-bufferline'
 
 " NerdTree
