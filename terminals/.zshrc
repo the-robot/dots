@@ -88,3 +88,6 @@ export LANG=en_US.UTF-8
 # else
 #   export EDITOR='mvim'
 # fi
+
+# Hide username@hostname
+USER=``
