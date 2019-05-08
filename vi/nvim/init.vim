@@ -19,10 +19,11 @@ call vundle#begin()
 " LightLine & Bufferline
 Plugin 'mmisono/battery.vim'
 Plugin 'itchyny/lightline.vim'
-Plugin 'mgee/lightline-bufferline'
+"Plugin 'mgee/lightline-bufferline'
 
 " NerdTree
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
 
 " Linters
@@ -80,22 +81,37 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
-" NERDTree config
-"let NERDTreeShowHidden=1
-"let NERDTreeIgnore=['\~$','\.DS\_Store','\*\.swp','__pycache__', '\.pyc$']
-"let NERDTreeWinSize=25
-"autocmd VimEnter * NERDTree
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Space Vim to use NerdTree
-"let g:spacevim_filemanager='NerdTree'
-
 
 
 " ============ VIM User Interface  ================ "
-"
+" NERDTree config
+" Hide helper text, hide common/lib files
+let NERDTreeMinimalUI=1
+"let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\~$','\.DS\_Store','\*\.swp','__pycache__', '\.pyc$']
+" Nerdtree to right and set nerdtree width
+let g:NERDTreeWinPos="right"
+let NERDTreeWinSize=30
+
+" Open nerdtree on start (even if only one file is opened)
+" autocmd VimEnter * NERDTree
+" Open nerdtree if no file is specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Change focus to main window instead of nerdtree
+autocmd VimEnter * wincmd p
+
+" Close nerdtree if it is the only one opened
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Nerdtree key mapping to open/close
+map <C-n> :NERDTreeToggle<CR>
+
+
+" Space Vim disable nerdtree
+let g:spacevim_enable_vimfiler_welcome=0
+
 " Highlight Current Line
 augroup CursorLine
     au!
@@ -107,15 +123,15 @@ augroup END
 colorscheme gruvbox 
 
 " Lightline & Bufferline
-let g:lightline = {
-    \'colorscheme': 'one',
-    \'separator': { 'left': '', 'right': '' },
-    \'subseparator': { 'left': '', 'right': '' }
-    \}
-let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
-let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
-let g:lightline.component_type   = {'buffers': 'tabsel'}
-set showtabline=2
+"let g:lightline = {
+"    \'colorscheme': 'one',
+"    \'separator': { 'left': '', 'right': '' },
+"    \'subseparator': { 'left': '', 'right': '' }
+"    \}
+"let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+"let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+"let g:lightline.component_type   = {'buffers': 'tabsel'}
+"set showtabline=2
 
 " rainbow parantheses
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
@@ -125,4 +141,3 @@ let g:neomake_open_list = 0
 
 " Vim, tabs to space
 :set tabstop=4
-
