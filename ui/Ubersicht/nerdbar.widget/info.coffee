@@ -19,6 +19,7 @@
     volume:   "osascript -e 'output volume of (get volume settings)'"
     charging: "pmset -g batt | grep -w 'charging'"
     ip: "ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\\.){3}[0-9]*).*/\\2/p'"
+    uptime: "uptime | awk -F'( |,|:)+' '{print $4,$5}'"
 
   #
   # ─── COLORS ─────────────────────────────────────────────────────────────────
@@ -33,8 +34,9 @@
     yellow:  "#fabd2f"
     orange:  "#db6f11"
     blue:    "#5491f2"
+    purple:  "#6759f9"
     magenta: "#b16286"
-    cyan:    "#689d6a"
+    cyan:    "#2bb1ae"
     white:   "#ebdbb2"
 
   #
@@ -48,7 +50,8 @@
            "$(#{ commands.wifi }):::" +
            "$(#{ commands.volume }):::" +
            "$(#{ commands.charging }):::" +
-           "$(#{ commands.ip }):::"
+           "$(#{ commands.ip }):::" +
+           "$(#{ commands.uptime }):::"
 
   #
   # ─── REFRESH ────────────────────────────────────────────────────────────────
@@ -80,8 +83,12 @@
       <div class="icon"><span class="fas battery-icon"></span></div>
       <span class="battery-output"></span>
     </div>
-    <div class="info-item time">
+    <div class="info-item uptime">
       <div class="icon"><i class="fas fa-clock"></i></div>
+      <span class="uptime-output"></span>
+    </div>
+    <div class="info-item time">
+      <div class="icon"><i class="fas fa-calendar-day"></i></div>
       <span class="time-output"></span>
     </div>
     """
@@ -101,7 +108,8 @@
     wifi     = if output[ 3 ] then output[ 3 ] else "Wifi disconnected"
     volume   = output[ 4 ]
     charging = output[ 5 ]
-    local_ip = if output[ 6 ] then output[ 6 ] else "No IP"
+    local_ip = if output[ 6 ] then output[ 6 ].split(" ")[0] else "No IP"
+    uptime = output[ 7 ]
 
     # create string for display
     volume_str = if parseInt(output[ 4 ]) == NaN  then "Unavailable" else "#{ volume }%"
@@ -111,6 +119,7 @@
     $( ".wifi-output" )    .text( "#{ wifi }" )
     $( ".volume-output" )  .text( "#{ volume_str }" )
     $( ".ip-output" )      .text( "#{ local_ip }" )
+    $( ".uptime-output" )         .text( "#{ uptime }")
 
     @handleBattery(
       Number( battery.replace( /%/g, "" ) ),
@@ -167,6 +176,8 @@
       background-color: #{ colors.cyan }
     .ip .icon
       background-color: #{ colors.grey }
+    .uptime .icon
+      background-color: #{ colors.purple }
 
     .info-item
       display: flex
