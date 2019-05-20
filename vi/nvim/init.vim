@@ -13,6 +13,9 @@ Plugin 'mmisono/battery.vim'
 "Plugin 'itchyny/lightline.vim'
 "Plugin 'mgee/lightline-bufferline'
 
+" VimFiler
+"Plugin 'shougo/vimfiler.vim'
+
 " NerdTree
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
