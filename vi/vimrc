@@ -26,6 +26,10 @@ Plugin 'mgee/lightline-bufferline'
 " Linters
 Plugin 'w0rp/ale'
 
+" Javascript and React Plugins
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
 " Other Plugins
 Plugin 'morhetz/gruvbox'
 Plugin 'tmhedberg/SimpylFold'
