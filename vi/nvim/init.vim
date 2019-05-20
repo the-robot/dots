@@ -21,6 +21,10 @@ Plugin 'jistr/vim-nerdtree-tabs'
 " Linters
 Plugin 'w0rp/ale'
 
+" Javascript and React Plugins
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
 " Git
 Plugin 'airblade/vim-gitgutter'
 
