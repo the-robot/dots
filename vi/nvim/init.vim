@@ -22,6 +22,9 @@ Plugin 'mmisono/battery.vim'
 "Plugin 'mgee/lightline-bufferline'
 Plugin 'brooth/far.vim'
 
+" VimFiler
+Plugin 'brooth/far.vim'
+
 " NerdTree
 "Plugin 'scrooloose/nerdtree'
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
