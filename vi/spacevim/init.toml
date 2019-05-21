@@ -18,6 +18,8 @@
     enable_tabline_filetype_icon = true
     statusline_unicode_symbols = true
 
+
+# Development Tools
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
@@ -25,14 +27,22 @@ auto-completion-return-key-behavior = "complete"
 auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
-name = 'shell'
-default_position = 'top'
-default_height = 30
-
-[[layers]]
 name = 'checkers'
 open-list = 0
 
+[[layers]]
+name = "git"
+
+[[layers]]
+name = "VersionControl"
+
+
+# Misc
 # For bookmark feature
 [[layers]]
 name = 'tools'
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
