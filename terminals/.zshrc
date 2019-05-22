@@ -33,6 +33,7 @@ alias cat='bat'
 # ====== External Tools ======
 # Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 
