@@ -28,11 +28,21 @@ Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
 
 " Commentary
-Plugin 'honza/vim-snippets'
+Plugin 'tpope/vim-commentary'
 
-" Javascript/React
+
+" LANGUAGES
+" Javascript & React
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+
+" CSS Color
+Plugin 'ap/vim-css-color'
+
+" Markdown & Latex
+Plugin 'plasticboy/vim-markdown'
+Plugin 'lervag/vimtex'
+
 
 " Other Plugins
 Plugin 'tmhedberg/SimpylFold'
@@ -41,6 +51,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'luochen1990/rainbow'
 Plugin 'brooth/far.vim'
 Plugin 'Asheq/close-buffers.vim'
+Plugin 'yuttie/comfortable-motion.vim'
 
 call vundle#end()
 
