@@ -121,8 +121,9 @@ xnoremap <space>B :w !bash<cr>
 " Close nerdtree if it is the only one opened
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Nerdtree key mapping to open/close
-map <C-n> :NERDTreeToggle<CR>
+" VimFiler/Nerdtree key mapping to open/close
+" map <C-n> :NERDTreeToggle<CR>
+map <C-n> :VimFiler<CR>
 
 
 " Space Vim disable nerdtree
