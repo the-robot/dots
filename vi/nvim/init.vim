@@ -85,6 +85,10 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
+" Python specific commands
+" Run selected python code in interpreter
+xnoremap <space>p :w !python3<cr>
+
 
 
 " ============ VIM User Interface  ================ "
