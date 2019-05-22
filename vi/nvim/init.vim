@@ -30,6 +30,10 @@ Plugin 'airblade/vim-gitgutter'
 " Commentary
 Plugin 'honza/vim-snippets'
 
+" Javascript/React
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
 " Other Plugins
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'tpope/vim-fugitive'
