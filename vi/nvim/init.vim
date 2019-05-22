@@ -85,9 +85,13 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
-" Python specific commands
-" Run selected python code in interpreter
-xnoremap <space>p :w !python3<cr>
+" Python commands
+" Run selected python code in python shell
+xnoremap <space>P :w !python3<cr>
+
+" Javascript commands
+" Run selected javascript code in node
+xnoremap <space>N :w !node<cr>
 
 
 
