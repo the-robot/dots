@@ -1,11 +1,3 @@
-"=============================================================================
-" init.vim --- Entry file for neovim
-" Copyright (c) 2016-2017 Wang Shidong & Contributors
-" Author: Wang Shidong < wsdjeg at 163.com >
-" URL: https://spacevim.org
-" License: GPLv3
-"=============================================================================
-
 execute 'source' fnamemodify(expand('<sfile>'), ':h').'/config/main.vim'
 
 set encoding=UTF-8
@@ -44,6 +36,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'luochen1990/rainbow'
 Plugin 'brooth/far.vim'
+Plugin 'Asheq/close-buffers.vim'
 
 call vundle#end()
 
@@ -85,15 +78,20 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
-" Python commands
+let g:tablineclosebutton=1
+
+" CloseBuffers custom shortcuts
+nnoremap <silent> <C-q> :CloseSelectedBuffers<CR>
+
+" Python shortcuts
 " Run selected python code in python shell
 xnoremap <space>P :w !python3<cr>
 
-" Javascript commands
+" Javascript shortcuts
 " Run selected javascript code in node
 xnoremap <space>N :w !node<cr>
 
-" Bash commands
+" Bash shortcuts
 " Run selected bash code in shell
 xnoremap <space>B :w !bash<cr>
 
@@ -122,9 +120,8 @@ xnoremap <space>B :w !bash<cr>
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " VimFiler/Nerdtree key mapping to open/close
+"map <C-n> :NERDTreeToggle<CR>
 map <C-n> :VimFiler<CR>
-" map <C-n> :NERDTreeToggle<CR>
-
 
 " Space Vim disable nerdtree
 let g:spacevim_enable_vimfiler_welcome=1
