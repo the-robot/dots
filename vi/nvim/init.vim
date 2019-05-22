@@ -27,8 +27,8 @@ Plugin 'w0rp/ale'
 " Git
 Plugin 'airblade/vim-gitgutter'
 
-" Vim Buffer Kill
-Plugin 'qpkorr/vim-bufkill'
+" Commentary
+Plugin 'honza/vim-snippets'
 
 " Other Plugins
 Plugin 'tmhedberg/SimpylFold'
