@@ -93,6 +93,10 @@ xnoremap <space>P :w !python3<cr>
 " Run selected javascript code in node
 xnoremap <space>N :w !node<cr>
 
+" Bash commands
+" Run selected bash code in shell
+xnoremap <space>B :w !bash<cr>
+
 
 
 " ============ VIM User Interface  ================ "
