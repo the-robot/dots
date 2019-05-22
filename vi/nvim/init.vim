@@ -78,8 +78,6 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
-let g:tablineclosebutton=1
-
 " CloseBuffers custom shortcuts
 nnoremap <silent> <C-q> :CloseSelectedBuffers<CR>
 
