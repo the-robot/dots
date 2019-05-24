@@ -166,3 +166,9 @@ bindsym $mod+a exec dolphin
 
 # Rofi
 bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 10'
+
+# Mailspring
+bindsym $mod+e exec mailspring
+
+# Chrome
+bindsym $mod+b exec chrome
