@@ -1,3 +1,11 @@
+# ====== Auto Starts ======
+exec --no-startup-id hsetroot -center ~/Pictures/Wallpapers/eso.jpg
+exec --no-startup-id xsettingsd &
+exec --no-startup-id compton -b
+exec --no-startup-id nm-applet
+
+
+# ====== Config ======
 # set modifier
 set $mod Mod1
 set $super Mod4
@@ -8,25 +16,8 @@ font pango: Noto Sans 9
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-#autostart
-exec --no-startup-id hsetroot -center ~/Pictures/Wallpapers/eso.jpg
-exec --no-startup-id xsettingsd &
-exec --no-startup-id compton -b
 
-# start a terminal
-bindsym $mod+Return exec alacritty  # i3-sensible-terminal
-
-# start dmenu (a program launcher)
-# bindsym $mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=8'"
-bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 10'
-
-# common apps keybinds
-# bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
-bindsym $mod+l exec slimlock 
-# bindsym $mod+Shift+w exec firefox
-# bindsym $mod+Shift+f exec thunar;workspace 3;focus
-# bindsym $mod+Shift+g exec geany
-
+# ====== Media Controls ======
 #change volume
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
@@ -38,6 +29,8 @@ bindsym XF86AudioPrev exec mpc prev
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioStop exec mpc stop
 
+
+# ====== i3 Bindings ======
 # kill focused window
 bindsym $mod+c kill
 # bindsym $alt+F4 kill
@@ -73,7 +66,7 @@ bindsym $mod+space floating toggle
 bindsym $mod+Shift+space focus mode_toggle
 
 # switch to workspace
-bindsym $alt+Control+Right workspace next
+bindsym $alt+Coave shared wntrol+Right workspace next
 bindsym $alt+Control+Left workspace prev
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -106,6 +99,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+
+# ====== UI ======
 # panel
 bar {
   position top
@@ -150,5 +145,24 @@ gaps outer 5
 # smart_gaps on
 smart_borders on
 
-# network-manager
-exec --no-startup-id nm-applet
+
+# ====== Common App Bindings ======
+# bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
+bindsym $mod+l exec slimlock 
+# bindsym $mod+Shift+w exec firefox
+# bindsym $mod+Shift+f exec thunar;workspace 3;focus
+# bindsym $mod+Shift+g exec geany
+
+
+# ====== Custom Program Shortcuts =======
+# Terminal
+bindsym $mod+Return exec alacritty  # i3-sensible-terminal
+
+# Dolphin
+bindsym $mod+a exec dolphin 
+
+# Dmenu (a program launcher)
+# bindsym $mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=8'"
+
+# Rofi
+bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 10'
