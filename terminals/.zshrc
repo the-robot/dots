@@ -1,6 +1,10 @@
 # ====== Exports ======
 export ZSH=~/.oh-my-zsh
 
+# Set Golang Path
+export GOPATH="$HOME/go"
+PATH="$GOPATH/bin:$PATH"
+
 # Environment Variables
 
 
