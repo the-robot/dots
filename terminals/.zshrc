@@ -96,3 +96,6 @@ export LANG=en_US.UTF-8
 
 # Hide username@hostname
 USER=``
+
+# Setup Virtual Golang
+command -v vg >/dev/null 2>&1 && eval "$(vg eval --shell zsh)"
