@@ -172,3 +172,6 @@ bindsym $mod+e exec mailspring
 
 # Chrome
 bindsym $mod+b exec chrome
+
+# VS Code
+bindsym $mod+v exec code
