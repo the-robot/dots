@@ -108,6 +108,8 @@ xnoremap <space>N :w !node<cr>
 " Run selected bash code in shell
 xnoremap <space>B :w !bash<cr>
 
+" Save file
+nnoremap <C-w> :w<CR>
 
 
 " ============ VIM User Interface  ================ "
