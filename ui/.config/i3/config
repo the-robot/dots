@@ -1,8 +1,11 @@
 # ====== Auto Starts ======
-exec --no-startup-id hsetroot -center ~/Pictures/Wallpapers/eso.jpg
+exec --no-startup-id hsetroot -center ~/Pictures/Wallpapers/596296.jpeg
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
+
+# Polybar
+exec --no-startup-id ~/.config/polybar/launch.sh &
 
 
 # ====== Config ======
@@ -102,21 +105,21 @@ bindsym $mod+r mode "resize"
 
 # ====== UI ======
 # panel
-bar {
-  position top
-	colors {
-        background #2f343f
-        statusline #2f343f
-        separator #282828 
-
-		# colour of border, background, and text
-        focused_workspace	#ebdbb2	#ebdbb2	#282828
-        active_workspace	#2f343f	#2f343f	#d8dee8
-        inactive_workspace	#2f343f	#2f343f	#d8dee8
-        urgent_workspace	#2f343f	#ebcb8b	#2f343f
-    }
-        status_command i3status
-}
+# bar {
+#   position top
+# 	colors {
+#        background #2f343f
+#        statusline #2f343f
+#        separator #282828 
+#
+#		# colour of border, background, and text
+#        focused_workspace	#ebdbb2	#ebdbb2	#282828
+#        active_workspace	#2f343f	#2f343f	#d8dee8
+#        inactive_workspace	#2f343f	#2f343f	#d8dee8
+#        urgent_workspace	#2f343f	#ebcb8b	#2f343f
+#    }
+#        status_command i3status
+#}
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 4
@@ -171,4 +174,7 @@ bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun 
 bindsym $mod+e exec mailspring
 
 # Chrome
-bindsym $mod+b exec google-chrome-stable
+# bindsym $mod+b exec google-chrome-stable
+
+# Opera
+bindsym $mod+b exec opera
