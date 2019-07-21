@@ -151,7 +151,11 @@ smart_borders on
 
 # ====== Common App Bindings ======
 # bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
-bindsym $mod+l exec slimlock 
+
+# Lock Desktop
+# bindsym $mod+l exec slimlock
+# bindsym $mod+l exec betterlockscreen --lock dim
+
 # bindsym $mod+Shift+w exec firefox
 # bindsym $mod+Shift+f exec thunar;workspace 3;focus
 # bindsym $mod+Shift+g exec geany
