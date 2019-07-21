@@ -154,7 +154,7 @@ smart_borders on
 
 # Lock Desktop
 # bindsym $mod+l exec slimlock
-# bindsym $mod+l exec betterlockscreen --lock dim
+bindsym $mod+l exec betterlockscreen --lock dim
 
 # bindsym $mod+Shift+w exec firefox
 # bindsym $mod+Shift+f exec thunar;workspace 3;focus
