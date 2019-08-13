@@ -14,7 +14,7 @@
         "**/.expo": true,
         "**/.expo-shared": true,
 
-        // NPM / Node
+        // NPM & Node
         "**/.next": true,
         "**/node_modules": true,
         "**/package-lock.json": true,
