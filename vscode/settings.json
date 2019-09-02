@@ -1,6 +1,7 @@
 {
     // General Settings
     "editor.fontFamily": "'Input Mono', 'Fura Code', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
     "editor.fontSize": 13,
     "explorer.confirmDelete": false,
     "window.zoomLevel": 0,
@@ -18,10 +19,15 @@
         "**/.next": true,
         "**/node_modules": true,
         "**/package-lock.json": true,
-        
+
         // Python
+        "**/bin": true,
+        "**/include": true,
+        "**/lib": true,
         "**/__pycache__": true,
         "**/*.pyc": true,
+        "**/.Python": true,
+        "**/.pytest_cache": true,
     },
 
 
