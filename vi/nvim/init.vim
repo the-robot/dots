@@ -14,7 +14,7 @@ Plugin 'mmisono/battery.vim'
 "Plugin 'mgee/lightline-bufferline'
 
 " VimFiler
-Plugin 'shougo/vimfiler.vim'
+" Plugin 'shougo/vimfiler.vim'
 
 " NerdTree
 "Plugin 'scrooloose/nerdtree'
@@ -33,8 +33,9 @@ Plugin 'tpope/vim-commentary'
 
 " LANGUAGES
 " Javascript & React
-Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'othree/yajs.vim'
+Plugin 'pangloss/vim-javascript'
 
 " CSS Color
 Plugin 'ap/vim-css-color'
@@ -61,15 +62,20 @@ call vundle#end()
 " ALE Linter
 " enable completion where available.
 " this setting must be set before ALE is loaded.
-let b:ale_linters=['pyflakes', 'flake8', 'pylint', "eslint"]
+let g:ale_linters = {
+\   'python': ['pyflakes', 'flake8', 'pylint'],
+\   'javascript': ['eslint'],
+\}
+let g:ale_fixers = {
+  \    'javascript': ['eslint'],
+  \    'typescript': ['prettier', 'tslint'],
+  \    'vue': ['eslint'],
+  \    'scss': ['prettier'],
+  \    'html': ['prettier'],
+  \    'reason': ['refmt']
+\}
+let g:ale_fix_on_save = 1
 let g:ale_completion_enabled=1
-
-" Enable code folding
-filetype plugin indent on
-let g:SimpylFold_docstring_preview=1
-set foldlevel=1
-set foldmethod=indent
-nnoremap <space><space> za
 
 " Disable Linting Windows
 " let g:spacevim_lint_on_save=0
@@ -81,6 +87,19 @@ let g:ale_open_list=0
 " Ale Python3 Support
 let g:ale_python_flake8_executable='python3'
 let g:ale_python_flake8_options='-m flake8'
+
+" Shortcut to go to next or previous linting warnings
+nnoremap ]r :ALENextWrap<CR>     " move to the next ALE warning / error
+nnoremap [r :ALEPreviousWrap<CR> " move to the previous ALE warning / error
+
+
+" Enable code folding
+filetype plugin indent on
+let g:SimpylFold_docstring_preview=1
+set foldlevel=1
+set foldmethod=indent
+nnoremap <space><space> za
+
 
 " Ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -108,8 +127,9 @@ xnoremap <space>N :w !node<cr>
 " Run selected bash code in shell
 xnoremap <space>B :w !bash<cr>
 
-" Save file
+" Save file shortcut
 nnoremap <C-w> :w<CR>
+
 
 
 " ============ VIM User Interface  ================ "
@@ -149,7 +169,7 @@ augroup CursorLine
 augroup END
 
 " Color Scheme
-colorscheme gruvbox 
+colorscheme monokai_tasty 
 
 " Lightline & Bufferline
 " let g:lightline = {
