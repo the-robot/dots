@@ -184,31 +184,31 @@ nnoremap <C-w> :w<CR>
 " ============ VIM User Interface  ================ "
 " NERDTree config
 " Hide helper text, hide common/lib files
-"let NERDTreeMinimalUI=1
-"let NERDTreeShowHidden=1
-"let NERDTreeIgnore=['\~$','\.DS\_Store','\*\.swp','__pycache__', '\.pyc$']
+let NERDTreeMinimalUI=1
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\~$','\.DS\_Store','\*\.swp','__pycache__', '\.pyc$']
 " Nerdtree to right and set nerdtree width
-"let g:NERDTreeWinPos="right"
-"let NERDTreeWinSize=30
+let g:NERDTreeWinPos="right"
+let NERDTreeWinSize=30
 
 " Open nerdtree on start (even if only one file is opened)
-" autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTree
 " Open nerdtree if no file is specified
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Change focus to main window instead of nerdtree
-"autocmd VimEnter * wincmd p
+autocmd VimEnter * wincmd p
 
 " Close nerdtree if it is the only one opened
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " VimFiler/Nerdtree key mapping to open/close
-"map <C-n> :NERDTreeToggle<CR>
-map <C-n> :VimFiler<CR>
+map <C-n> :NERDTreeToggle<CR>
+"map <C-n> :VimFiler<CR>
 
 " Space Vim disable nerdtree
-let g:spacevim_enable_vimfiler_welcome=1
+"let g:spacevim_enable_vimfiler_welcome=1
 
 " Highlight Current Line
 augroup CursorLine
