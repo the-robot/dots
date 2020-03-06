@@ -117,7 +117,7 @@ set expandtab
 set autoindent
 
 " CloseBuffers custom shortcuts
-nnoremap <silent> <C-q> :CloseSelectedBuffers<CR>
+nnoremap <silent> <C-q> :Bdelete select<CR>
 
 " Python shortcuts
 " Run selected python code in python shell
