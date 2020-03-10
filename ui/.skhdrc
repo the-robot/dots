@@ -1,3 +1,6 @@
+# Open Terminal
+cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+
 # Navigation
 alt - h : yabai -m window --focus west
 alt - j : yabai -m window --focus south
