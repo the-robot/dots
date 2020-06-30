@@ -172,13 +172,14 @@ bindsym $mod+a exec dolphin
 # bindsym $mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=8'"
 
 # Rofi
-bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 10'
+# bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 10'
+bindsym $mod+d exec ~/.config/rofi/launchers-ribbon/launcher.sh
 
-# Mailspring
-bindsym $mod+e exec mailspring
+# Rofi Network Menu
+bindsym $mod+d exec ~/.config/rofi/scripts/network.sh
 
 # Chrome
-# bindsym $mod+b exec google-chrome-stable
+bindsym $mod+b exec google-chrome-stable
 
-# Opera
-bindsym $mod+b exec opera
+# VSCode
+bindsym $mod+e exec code
