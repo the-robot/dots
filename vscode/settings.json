@@ -4,6 +4,7 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 13,
     "explorer.confirmDelete": false,
+    // "terminal.integrated.fontFamily": "SpaceMono Nerd Font Mono",
     "window.zoomLevel": 0,
 
 
