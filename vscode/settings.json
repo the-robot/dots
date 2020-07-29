@@ -71,4 +71,29 @@
         "editor.insertSpaces": true,
         "editor.tabSize": 2
     },
+    
+    // Todo Highlights
+    "todohighlight.keywords": [
+        {
+            "text": "NOTE:",
+            "color": "#FFFFFF",
+            "backgroundColor": "#27ae60",
+        },
+        {
+            "text": "HACK:",
+            "color": "#FFFFFF",
+            "backgroundColor": "#8e44ad",
+            "isWholeLine": false,
+        },
+        {
+            "text": "REVIEW:",
+            "color": "#FFFFFF",
+            "backgroundColor": "#34495e"
+        },
+        {
+            "text": "BUG:",
+            "color": "#FFFFFF",
+            "backgroundColor": "#e74c3c"
+        }
+    ],
 }
