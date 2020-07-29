@@ -48,9 +48,10 @@
             "backgroundColor": "#e84393"
         },
         {
-            "text": "DEBUG-STEP:",
+            "text": "DEBUG:",
             "color": "#FFFFFF",
-            "backgroundColor": "#2c2c54"
+            "backgroundColor": "#2c2c54",
+            "isWholeLine": true
         },
     ],
 
