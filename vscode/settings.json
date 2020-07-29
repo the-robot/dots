@@ -1,12 +1,53 @@
 {
-    // General Settings
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 0,
+
     "editor.fontFamily": "'Input Mono', 'Fura Code', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 13,
-    "explorer.confirmDelete": false,
-    // "terminal.integrated.fontFamily": "SpaceMono Nerd Font Mono",
-    "window.zoomLevel": 0,
 
+    // "terminal.integrated.fontFamily": "SpaceMono Nerd Font Mono",
+    "terminal.integrated.fontSize": 14,
+    
+    // Todo Highlights
+    "todohighlight.keywords": [
+        {
+            "text": "REVIEW:",
+            "color": "#FFFFFF",
+            "backgroundColor": "#34495e"
+        },
+        {
+            "text": "NOTE:",
+            "color": "#FFFFFF",
+            "backgroundColor": "#27ae60",
+        },
+        {
+            "text": "TODO:",
+            "color": "#FFFFFF",
+            "backgroundColor": "#e1b12c"
+        },
+        {
+            "text": "HACK:",
+            "color": "#FFFFFF",
+            "backgroundColor": "#8e44ad",
+            "isWholeLine": false,
+        },
+        {
+            "text": "BUG:",
+            "color": "#FFFFFF",
+            "backgroundColor": "#e74c3c"
+        },
+        {
+            "text": "DOCME:",
+            "color": "#FFFFFF",
+            "backgroundColor": "#0984e3"
+        },
+        {
+            "text": "TESTME:",
+            "color": "#FFFFFF",
+            "backgroundColor": "#e84393"
+        },
+    ],
 
     // Tree Explorer
     "files.exclude": {
@@ -30,7 +71,6 @@
         "**/.Python": true,
         "**/.pytest_cache": true,
     },
-
 
     // Language Formatting
     "[python]": {
@@ -72,29 +112,4 @@
         "editor.insertSpaces": true,
         "editor.tabSize": 2
     },
-    
-    // Todo Highlights
-    "todohighlight.keywords": [
-        {
-            "text": "NOTE:",
-            "color": "#FFFFFF",
-            "backgroundColor": "#27ae60",
-        },
-        {
-            "text": "HACK:",
-            "color": "#FFFFFF",
-            "backgroundColor": "#8e44ad",
-            "isWholeLine": false,
-        },
-        {
-            "text": "REVIEW:",
-            "color": "#FFFFFF",
-            "backgroundColor": "#34495e"
-        },
-        {
-            "text": "BUG:",
-            "color": "#FFFFFF",
-            "backgroundColor": "#e74c3c"
-        }
-    ],
 }
