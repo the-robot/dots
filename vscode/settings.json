@@ -47,6 +47,11 @@
             "color": "#FFFFFF",
             "backgroundColor": "#e84393"
         },
+        {
+            "text": "DEBUG-STEP:",
+            "color": "#FFFFFF",
+            "backgroundColor": "#2c2c54"
+        },
     ],
 
     // Tree Explorer
