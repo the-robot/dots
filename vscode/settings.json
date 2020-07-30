@@ -98,6 +98,11 @@
         "editor.insertSpaces": true,
         "editor.tabSize": 2
     },
+    
+    "[typescriptreact]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
 
     "[css]": {
         "editor.insertSpaces": true,
