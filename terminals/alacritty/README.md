@@ -1,4 +1,4 @@
-My Alacritty Color Schemes
+Alacritty Color Schemes
 ===
 
 ### *1. neon_night*
