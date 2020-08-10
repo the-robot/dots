@@ -39,7 +39,6 @@ colors:
     magenta: "#FB94FF"
     cyan: "#80FCFF"
     white: "#2D2B55"
-
 ```
 
 ---
