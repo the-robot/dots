@@ -1,7 +1,9 @@
 My Alacritty Color Schemes
 ===
 
-***neon_night***
+### *1. neon_night*
+
+<img src="https://raw.githubusercontent.com/the-robot/dots/master/terminals/alacritty/screenshots/neon_night.png" alt="neo_night" width="500" height="280" />
 
 ```
 # Colors (Neon Night)
@@ -39,4 +41,6 @@ colors:
     white: "#2D2B55"
 
 ```
+
+---
 
