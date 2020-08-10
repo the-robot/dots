@@ -166,8 +166,8 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '#2D2A2E'
-    foreground: '#FCFCFA'
+    background: "#1513232"
+    foreground: "#E1EFFF"
 
     # Bright and dim foreground colors
     #
@@ -181,9 +181,9 @@ colors:
   #
   # Colors which should be used to draw the terminal cursor. If these are unset,
   # the cursor color will be the inverse of the cell color.
-  #cursor:
-  #  text: '0x000000'
-  #  cursor: '0xffffff'
+  cursor:
+    text: "#1E1E3F"
+    cursor: "#A70052"
   
   # Selection colors
   #
@@ -194,27 +194,27 @@ colors:
   #  text: '0xeaeaea'
   #  background: '0x404040'
 
- # Normal colors
+  # Normal colors
   normal:
-    black:   '#403E41'
-    red:     '#FF6188'
-    green:   '#A9DC76'
-    yellow:  '#FFD866'
-    blue:    '#FC9867'
-    magenta: '#AB9DF2'
-    cyan:    '#78DCE8'
-    white:   '#FCFCFA'
+    black: "#000000"
+    red: "#EC3A37"
+    green: "#75e44c"
+    yellow: "#FAD000"
+    blue: "#6943FF"
+    magenta: "#FF2C70"
+    cyan: "#80FCFF"
+    white: "#FFFFFF"
 
   # Bright colors
   bright:
-    black:   '#727072'
-    red:     '#FF6188'
-    green:   '#A9DC76'
-    yellow:  '#FFD866'
-    blue:    '#FC9867'
-    magenta: '#AB9DF2'
-    cyan:    '#78DCE8'
-    white:   '#FCFCFA'
+    black: "#151323"
+    red: "#EC3A37F5"
+    green: "#3AD900"
+    yellow: "#FAD000"
+    blue: "#6943FF"
+    magenta: "#FB94FF"
+    cyan: "#80FCFF"
+    white: "#2D2B55"
 
   # Dim colors
   #
