@@ -212,7 +212,7 @@ let NERDTreeIgnore=[
             \ '\.next',
             \ 'node_modules',
             \ 'package-lock.json',
-            \ 'yarn-lock.json',
+            \ 'yarn.lock',
             \ 'bin',
             \ 'include',
             \ 'lib',
