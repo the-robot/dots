@@ -44,6 +44,7 @@ Plugin 'leafgarland/typescript-vim'
 " React
 Plugin 'mxw/vim-jsx'
 Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'styled-components/vim-styled-components'
 
 
 " CSS Color
@@ -193,9 +194,29 @@ nnoremap <C-w> :w<CR>
 " ============ VIM User Interface  ================ "
 " NERDTree config
 " Hide helper text, hide common/lib files
+set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*
+let NERDTreeRespectWildIgnore=1
 let NERDTreeMinimalUI=1
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\~$','\.DS\_Store','\*\.swp','__pycache__', '\.pyc$']
+let NERDTreeIgnore=[
+            \  '\~$',
+            \ '\.DS\_Store',
+            \ '\*\.swp',
+            \ '\.vscode',
+            \ '__pycache__',
+            \ '\.pyc$',
+            \ '\.pytest_cache',
+            \ '\.Python',
+            \ '\.expo',
+            \ '\.expo-shared',
+            \ '\.next',
+            \ 'node_modules',
+            \ 'package-lock.json',
+            \ 'yarn-lock.json',
+            \ 'bin',
+            \ 'include',
+            \ 'lib',
+\ ]
 " Nerdtree to right and set nerdtree width
 let g:NERDTreeWinPos="right"
 let NERDTreeWinSize=30
