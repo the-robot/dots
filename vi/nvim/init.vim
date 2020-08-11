@@ -36,10 +36,15 @@ Plugin 'tpope/vim-commentary'
 
 
 " LANGUAGES
-" Javascript & React
-Plugin 'mxw/vim-jsx'
+" Javascript & Typescript
 Plugin 'othree/yajs.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'leafgarland/typescript-vim'
+
+" React
+Plugin 'mxw/vim-jsx'
+Plugin 'peitalin/vim-jsx-typescript'
+
 
 " CSS Color
 Plugin 'ap/vim-css-color'
@@ -91,6 +96,10 @@ let g:ale_open_list=0
 " Ale Python3 Support
 let g:ale_python_flake8_executable='python3'
 let g:ale_python_flake8_options='-m flake8'
+
+" Set tsx and jsx as typescript.tsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+
 
 " Shortcut to go to next or previous linting warnings
 nnoremap ]r :ALENextWrap<CR>     " move to the next ALE warning / error
