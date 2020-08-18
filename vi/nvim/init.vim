@@ -41,6 +41,9 @@ Plugin 'othree/yajs.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'leafgarland/typescript-vim'
 
+" Templating Syntax
+Plugin 'mustache/vim-mustache-handlebars'
+
 " React
 Plugin 'mxw/vim-jsx'
 Plugin 'peitalin/vim-jsx-typescript'
@@ -270,3 +273,8 @@ let g:neomake_open_list = 0
 " Vim, tabs to space
 :set tabstop=4
 
+
+" Syntax UI Config
+" Enable JS library syntax(s)
+autocmd BufNewFile,BufRead *.hbs set filetype=html.mustache
+let g:mustache_abbreviations = 1
