@@ -57,6 +57,7 @@
 
     // Tree Explorer
     "files.exclude": {
+        "**/.idea": true,
         "**/.vscode": true,
 
         // React Native
