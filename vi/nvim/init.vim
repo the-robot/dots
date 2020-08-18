@@ -271,7 +271,10 @@ let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 let g:neomake_open_list = 0
 
 " Vim, tabs to space
-:set tabstop=4
+:set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+" set 2 spaces for Javascript and Typescript
+autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType typescript setlocal shiftwidth=2 softtabstop=2 expandtab
 
 
 " Syntax UI Config
