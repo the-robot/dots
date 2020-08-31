@@ -38,14 +38,16 @@ Plugin 'tpope/vim-commentary'
 " LANGUAGES
 " Javascript & Typescript
 Plugin 'othree/yajs.vim'
-Plugin 'pangloss/vim-javascript'
+Plugin 'yuezk/vim-js'
+" Plugin 'pangloss/vim-javascript'
 Plugin 'leafgarland/typescript-vim'
 
 " Templating Syntax
 Plugin 'mustache/vim-mustache-handlebars'
 
 " React
-Plugin 'mxw/vim-jsx'
+" Plugin 'mxw/vim-jsx'
+Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'styled-components/vim-styled-components'
 
@@ -103,6 +105,10 @@ let g:ale_python_flake8_options='-m flake8'
 
 " Set tsx and jsx as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+
+" set javascript react pretty
+let g:vim_jsx_pretty_template_tags=['html', 'jsx']
+let g:vim_jsx_pretty_colorful_config=1
 
 
 " Shortcut to go to next or previous linting warnings
