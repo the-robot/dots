@@ -102,7 +102,7 @@ let g:ale_python_flake8_executable='python3'
 let g:ale_python_flake8_options='-m flake8'
 
 " Set tsx and jsx as typescript.tsx
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 
 
 " Shortcut to go to next or previous linting warnings
@@ -278,6 +278,7 @@ let g:neomake_open_list = 0
 :set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 " set 2 spaces for Javascript and Typescript
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType javascriptreact setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType typescript setlocal shiftwidth=2 softtabstop=2 expandtab
 
 
