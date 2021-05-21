@@ -17,7 +17,7 @@ ZSH_THEME="agnoster"
 # ====== Sources/Zsh Plugins ======
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/etc/profile.d/z.sh
+source ~/.z.sh
 
 plugins=(
     git
@@ -30,14 +30,12 @@ alias tmux='tmux -u'
 
 alias vf='nvim $(fzf)'
 alias nv='nvim'
-alias ls='colorls'
+alias ls='lsd'
 alias cat='bat'
 
 
 # ====== External Tools ======
 # Fuzzy Finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 
@@ -98,4 +96,4 @@ export LANG=en_US.UTF-8
 USER=``
 
 # Setup Virtual Golang
-command -v vg >/dev/null 2>&1 && eval "$(vg eval --shell zsh)"
+# command -v vg >/dev/null 2>&1 && eval "$(vg eval --shell zsh)"
