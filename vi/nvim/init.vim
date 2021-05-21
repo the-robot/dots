@@ -17,9 +17,9 @@ Plugin 'mmisono/battery.vim'
 " Plugin 'shougo/vimfiler.vim'
 
 " NerdTree
-"Plugin 'scrooloose/nerdtree'
-"Plugin 'Xuyuanp/nerdtree-git-plugin'
-"Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 " FZF
 Plugin 'junegunn/fzf', { 'do': './install --bin' }
