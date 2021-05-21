@@ -1,16 +1,13 @@
 {
     "editor.smoothScrolling": true,
     "editor.fontLigatures": true,
-    "editor.fontFamily": "Monaco, 'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "Monaco, 'JetBrains Mono', Menlo, 'Courier New', monospace",
     "editor.fontSize": 13,
 
     "terminal.integrated.fontFamily": "SpaceMono Nerd Font Mono",
 
     "go.formatTool": "goimports",
-    "go.useLanguageServer": true,
     "window.zoomLevel": 0,
-    "vscode_vibrancy.opacity": 0,
-    "vscode_vibrancy.theme": "Dark (Only Subbar)",
 
     "launch": {
         "configurations": [],
