@@ -1,14 +1,34 @@
 {
-    "explorer.confirmDelete": false,
-    "window.zoomLevel": 0,
-
-    "editor.fontFamily": "'Input Mono', 'Fura Code', Menlo, Monaco, 'Courier New', monospace",
+    "editor.smoothScrolling": true,
     "editor.fontLigatures": true,
+    "editor.fontFamily": "Monaco, 'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 13,
 
-    // "terminal.integrated.fontFamily": "SpaceMono Nerd Font Mono",
-    "terminal.integrated.fontSize": 14,
-    
+    "terminal.integrated.fontFamily": "SpaceMono Nerd Font Mono",
+
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "window.zoomLevel": 0,
+    "vscode_vibrancy.opacity": 0,
+    "vscode_vibrancy.theme": "Dark (Only Subbar)",
+
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    },
+
+    "files.associations": {
+        "**/defaults/**/*": "ansible",
+        "**/tasks/**/*.yml" : "ansible",
+        "**/handler/*.yml" : "ansible",
+        "**/*_vars/**/*.yml" : "ansible",
+        "**/roles/**/*.yml" : "ansible",
+        "**/playbooks/**/*.yml" : "ansible",
+        "**/*ansible*/**/*.yml" : "ansible",
+        "**/vars/**/*.yml": "ansible",
+        "**/inventory/*/*": "ansible"
+    },
+
     // Todo Highlights
     "todohighlight.keywords": [
         {
@@ -71,16 +91,37 @@
         "**/yarn.lock": true,
 
         // Python
-        "**/bin": true,
-        "**/include": true,
-        "**/lib": true,
+        // "**/bin": true,
+        // "**/include": true,
+        // "**/lib": true,
         "**/__pycache__": true,
         "**/*.pyc": true,
         "**/.Python": true,
         "**/.pytest_cache": true,
     },
 
+
     // Language Formatting
+    "[ansible]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+
+    "[helm-template]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+
+    "[terraform]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+
     "[python]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 4
@@ -100,7 +141,7 @@
         "editor.insertSpaces": true,
         "editor.tabSize": 2
     },
-    
+
     "[typescriptreact]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2
@@ -125,4 +166,23 @@
         "editor.insertSpaces": true,
         "editor.tabSize": 2
     },
+
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": true
+        }
+    },
+
+    "tabnine.experimentalAutoImports": true,
+    "explorer.confirmDelete": false,
+    "editor.codeActionsOnSave": null,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "terminal.integrated.rendererType": "dom",
 }
