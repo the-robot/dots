@@ -31,7 +31,7 @@ alias tmux='tmux -u'
 alias vf='nvim $(fzf)'
 alias nv='nvim'
 alias ls='lsd'
-alias cat='bat'
+alias cat='batcat'
 
 
 # ====== External Tools ======
