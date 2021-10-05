@@ -15,7 +15,7 @@ PATH="$GOPATH/bin:$PATH"
 # ====== UI ======
 # set "random" to load themes randomly
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-ZSH_THEME="agnoster"
+ZSH_THEME="crcandy"
 
 
 # ====== Sources/Zsh Plugins ======
