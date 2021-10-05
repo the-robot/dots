@@ -36,6 +36,7 @@ alias vf='nvim $(fzf)'
 alias nv='nvim'
 alias ls='lsd'
 alias cat='batcat'
+alias history='history -t "%d/%m/%Y 🔸"'
 
 
 # ====== External Tools ======
