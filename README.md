@@ -35,4 +35,4 @@
 
 ## 4. Browser Extensions 🦊
 
-- [Firefox Extensions](https://github.com/the-robot/dots/wiki/Useful-Firefox-Extensions)
+- [Firefox Extensions](https://github.com/the-robot/dots/wiki/Firefox-Extensions)
