@@ -2,6 +2,8 @@
     <img src="https://raw.githubusercontent.com/the-robot/dots/master/dotfiles.png" width="404" height="115">
 </p>
 
+> Checkout [the-robot/ansible-setups](https://github.com/the-robot/ansible-setups) for one-liner Linux machine setups using ansible.
+
 ## 1. Terminal 🚀
 
 - [Alacritty](https://github.com/the-robot/dots/tree/master/terminals/alacritty) `with theme configs inside`
