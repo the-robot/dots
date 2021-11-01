@@ -32,3 +32,7 @@
 - [spacevim](https://github.com/the-robot/dots/tree/master/vi/spacevim)
 - [vim](https://github.com/the-robot/dots/blob/master/vi/vimrc)
 - [vscode](https://github.com/the-robot/dots/blob/master/vscode)
+
+## 4. Browser Extensions 🦊
+
+- [Firefox Extensions](https://github.com/the-robot/dots/wiki/Useful-Firefox-Extensions)
