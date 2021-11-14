@@ -9,6 +9,10 @@ PATH="$LOCALBINPATH/bin:$PATH"
 export GOPATH="$HOME/go"
 PATH="$GOPATH/bin:$PATH"
 
+# Set Rust Path
+export RUSTPATH="$HOME/.cargo"
+PATH="$RUSTPATH/bin:$PATH"
+
 # Environment Variables
 
 
