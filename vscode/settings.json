@@ -159,6 +159,11 @@
             "source.organizeImports": true
         }
     },
+    
+    "[tf]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
 
     "tabnine.experimentalAutoImports": true,
     "explorer.confirmDelete": false,
