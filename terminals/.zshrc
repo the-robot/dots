@@ -6,7 +6,7 @@ export LOCALBINPATH="$HOME/.local"
 PATH="$LOCALBINPATH/bin:$PATH"
 
 # Set Golang Path
-export GOPATH="$HOME/go"
+export GOPATH="$HOME/.go"
 PATH="$GOPATH/bin:$PATH"
 
 # Set Rust Path
