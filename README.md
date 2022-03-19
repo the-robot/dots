@@ -9,7 +9,8 @@
 - [Alacritty](https://github.com/the-robot/dots/tree/master/terminals/alacritty) `with theme configs inside`
 - [Tmux](https://github.com/the-robot/dots/blob/master/terminals/tmux)
 - [Zsh](https://github.com/the-robot/dots/blob/master/terminals/.zshrc)
-- [Git Commitizen Conventional Commit](https://github.com/the-robot/dots/blob/master/terminals/.czrc)
+- [Git Commitizen Conventional Commit](https://github.com/the-robot/dots/blob/master/terminals/.czrc) 
+  - [cz-cli](https://github.com/commitizen/cz-cli#conventional-commit-messages-as-a-global-utility) for reference
 
 ## 2. UI Configs 🖥️
 
