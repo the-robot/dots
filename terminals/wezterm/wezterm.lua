@@ -3,7 +3,7 @@ local wezterm = require 'wezterm';
 local config = {
   check_for_updates = true,
 
-  text_background_opacity = 1,
+  text_background_opacity = 1.0,
   window_background_opacity = 0.98,
 
   -- font
