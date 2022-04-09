@@ -7,6 +7,7 @@
 ## 1. Terminal 🚀
 
 - [Alacritty](https://github.com/the-robot/dots/tree/master/terminals/alacritty) `with theme configs inside`
+- [Wezterm](https://github.com/the-robot/dots/tree/master/terminals/wezterm)
 - [Tmux](https://github.com/the-robot/dots/blob/master/terminals/tmux)
 - [Zsh](https://github.com/the-robot/dots/blob/master/terminals/.zshrc)
 - [Git Commitizen Conventional Commit](https://github.com/the-robot/dots/blob/master/terminals/.czrc) 
@@ -32,6 +33,7 @@
 
 ## 3. Code Editors 📒
 
+- [helix](https://github.com/the-robot/dots/tree/master/helix)
 - [neovim](https://github.com/the-robot/dots/tree/master/vi/nvim)
 - [spacevim](https://github.com/the-robot/dots/tree/master/vi/spacevim)
 - [vim](https://github.com/the-robot/dots/blob/master/vi/vimrc)
