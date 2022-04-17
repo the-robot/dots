@@ -42,3 +42,10 @@
 ## 4. Browser Extensions 🦊
 
 - [Firefox Extensions](https://github.com/the-robot/dots/wiki/Firefox-Extensions)
+
+</br>
+
+<p align="center">
+  <a href="https://github.com/the-robot" target="_blank" style="display: table-cell;padding: 5px;"><img src="https://img.shields.io/badge/GitHub-the--robot-gray.svg?colorA=E5E3C9&colorB=B4CFB0&style=for-the-badge"></a>
+  <a href="mailto:contact@khant.dev" target="_blank" style="display: table-cell;padding: 5px;"><img src="https://img.shields.io/badge/Email-contact%40khant.dev-gray.svg?colorA=F3E9DD&colorB=B7CADB&style=for-the-badge"></a>
+</p>
