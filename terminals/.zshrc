@@ -22,7 +22,7 @@ export AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key)
 # ====== UI ======
 # set "random" to load themes randomly
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-ZSH_THEME="crcandy"
+ZSH_THEME="jnrowe"
 
 
 # ====== Sources/Zsh Plugins ======
@@ -41,9 +41,11 @@ alias tmux='tmux -u'
 
 alias vf='nvim $(fzf)'
 alias nv='nvim'
-alias ls='lsd'
+alias ls='exa -F'
 alias cat='batcat'
 alias history='history -t "%d/%m/%Y 🔸"'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 
 # ====== External Tools ======
