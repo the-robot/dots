@@ -4,7 +4,7 @@ local config = {
   check_for_updates = false,
 
   text_background_opacity = 1.0,
-  window_background_opacity = 0.98,
+  window_background_opacity = 1.0,
 
   -- font
   font = wezterm.font("JetBrains Mono", {weight="Bold", italic=false}),
