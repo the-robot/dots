@@ -11,7 +11,7 @@ local config = {
   font_size = 10.0,
 
   -- color schemes
-  color_scheme = "Andromeda",
+  color_scheme = "Humanoid dark (base16)",
 }
 
 return config
