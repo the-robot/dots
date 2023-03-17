@@ -13,6 +13,11 @@ PATH="$GOPATH/bin:$PATH"
 export RUSTPATH="$HOME/.cargo"
 PATH="$RUSTPATH/bin:$PATH"
 
+ # Set NVM Path
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Environment Variables
 # aws cli config
 export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id)
@@ -46,6 +51,7 @@ alias cat='batcat'
 alias history='history -t "%d/%m/%Y 🔸"'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+alias sshNoVerify='ssh -o "UserKnownHostsFile=/dev/null"'
 
 
 # ====== External Tools ======
