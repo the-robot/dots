@@ -1,43 +1,38 @@
-# ====== Exports ======
-export ZSH=~/.oh-my-zsh
+# ====== Shell Config ======
+eval "$(starship init zsh)"
 
+
+# ====== Exports ======
 # Set Local Bin Path
 export LOCALBINPATH="$HOME/.local"
 PATH="$LOCALBINPATH/bin:$PATH"
 
 # Set Golang Path
-export GOPATH="$HOME/.go"
+export GOPATH="$HOME/.local/go"
 PATH="$GOPATH/bin:$PATH"
 
 # Set Rust Path
-export RUSTPATH="$HOME/.cargo"
+export RUSTPATH="$HOME/.local/cargo"
 PATH="$RUSTPATH/bin:$PATH"
 
- # Set NVM Path
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Set Homebrew Path
+export HOMEBREWPATH="/opt/homebrew"
+PATH="$HOMEBREWPATH/bin:$PATH"
 
-# Environment Variables
-# aws cli config
-export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id)
-export AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key)
+# Set Volta Path
+export VOLTAPATH="$HOME/.volta"
+PATH="$VOLTAPATH/bin:$PATH"
 
 
 # ====== UI ======
 # set "random" to load themes randomly
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-ZSH_THEME="jnrowe"
+# ZSH_THEME="jnrowe"
 
 
 # ====== Sources/Zsh Plugins ======
-source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.z.sh
-
-plugins=(
-    git
-)
+source ~/.zsh/z.sh
 
 
 # ====== Aliases ======
@@ -46,11 +41,9 @@ alias tmux='tmux -u'
 
 alias vf='nvim $(fzf)'
 alias nv='nvim'
-alias ls='exa -F'
-alias cat='batcat'
+alias ls='eza --icons'
+alias cat='bat'
 alias history='history -t "%d/%m/%Y 🔸"'
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
 alias sshNoVerify='ssh -o "UserKnownHostsFile=/dev/null"'
 
 
@@ -111,9 +104,3 @@ export LANG=en_US.UTF-8
 # else
 #   export EDITOR='mvim'
 # fi
-
-# Hide username@hostname
-USER=``
-
-# Setup Virtual Golang
-# command -v vg >/dev/null 2>&1 && eval "$(vg eval --shell zsh)"
